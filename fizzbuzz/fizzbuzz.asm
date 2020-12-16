@@ -1,6 +1,3 @@
-; FizzBuzz itoa algorithm
-; Reserve 16 bytes (digits in string) for variable str
-; 
 
 %include 'lib.asm'
 
@@ -15,12 +12,6 @@ section .text
 global _start
 
 _start:
-	; Print Fizz!Buzz!
-	mov rax, fizz
-	call print
-	mov rax, buzz
-	call println
-
 	; Set up the main counter
 	mov rbx, 0
 
@@ -30,6 +21,7 @@ loop:
 	je exit
 	add rbx, 1
 	
+	; rbx % 15 == 0	
 	xor rdx, rdx
 	mov rax, rbx
 	mov rcx, 15
