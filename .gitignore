@@ -2,5 +2,4 @@
 !.gitignore
 !LICENSE
 !README.md
-!*/
-!*.asm
+!**.asm
